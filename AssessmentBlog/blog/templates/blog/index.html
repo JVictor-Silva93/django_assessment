@@ -1,0 +1,185 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Django Assessment</h1>
+    <p class="lead">Follow the instructions and answer the questions below in your own ".md" file or word document.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Multiple Choice Questions -->
+  <section>
+    <h2>I. Multiple Choice Questions</h2>
+    <ol>
+        <li>Which of the following is the primary configuration file for a Django project?
+            <ul>
+                <li>a) <code>settings.py</code></li>
+                <li>b) <code>config.py</code></li>
+                <li>c) <code>django.conf</code></li>
+                <li>d) <code>main.py</code></li>
+            </ul>
+        </li>
+        
+        <li>How do you start a new Django <strong>app</strong> named 'blog'?
+            <ul>
+                <li>a) <code>django startapp blog</code></li>
+                <li>b) <code>django newapp blog</code></li>
+                <li>c) <code>django createapp blog</code></li>
+                <li>d) <code>python manage.py startapp blog</code></li>
+            </ul>
+        </li>
+        
+        <li>In a Django view, what is the purpose of the <code>HttpResponse</code> class?
+            <ul>
+                <li>a) To redirect the user to a different webpage.</li>
+                <li>b) To render a template and send it to the user.</li>
+                <li>c) To capture form input from the user.</li>
+                <li>d) To send an HTML response to the user.</li>
+            </ul>
+        </li>
+
+        <li>What is the command to run a Django development server on port 8080?
+            <ul>
+                <li>a) <code>python manage.py runserver</code></li>
+                <li>b) <code>python manage.py runserver 8080</code></li>
+                <li>c) <code>django serve --port 8080</code></li>
+                <li>d) <code>django runserver -p 8080</code></li>
+            </ul>
+        </li>
+
+        <li>Which command is used to start a new Django <strong>project</strong> named 'myproject'?
+            <ul>
+                <li>a) <code>django-admin createproject myproject</code></li>
+                <li>b) <code>python manage.py startproject myproject</code></li>
+                <li>c) <code>django-admin startproject myproject</code></li>
+                <li>d) <code>django new myproject</code></li>
+            </ul>
+        </li>
+
+        <li>Which Django object allows you to interact with the database, equivalent to running SQL commands?
+            <ul>
+                <li>a) Manager</li>
+                <li>b) Model</li>
+                <li>c) Middleware</li>
+                <li>d) Migrations</li>
+            </ul>
+        </li>
+
+        <li>If you wanted to redirect a user to a different webpage after they submitted a form, which Django function would you use?
+            <ul>
+                <li>a) <code>HttpResponse()</code></li>
+                <li>b) <code>render()</code></li>
+                <li>c) <code>redirect()</code></li>
+                <li>d) <code>send()</code></li>
+            </ul>
+        </li>
+
+        <li>Which command applies changes to the database based on model changes?
+            <ul>
+                <li>a) <code>python manage.py migrate</code></li>
+                <li>b) <code>python manage.py makemigrations</code></li>
+                <li>c) <code>python manage.py applymigrations</code></li>
+                <li>d) <code>python manage.py dbupdate</code></li>
+            </ul>
+        </li>
+
+        <li>What purpose does the <code>MEDIA_URL</code> setting in Django serve?
+            <ul>
+                <li>a) It specifies the URL for static files.</li>
+                <li>b) It specifies the URL for user-uploaded files.</li>
+                <li>c) It sets the URL for the Django admin site.</li>
+                <li>d) It sets the base URL for the entire Django project.</li>
+            </ul>
+        </li>
+
+        <li>Which decorator is commonly used in Django views to ensure that a user is logged in before they can access a particular view?
+            <ul>
+                <li>a) <code>@authenticate</code></li>
+                <li>b) <code>@verify</code></li>
+                <li>c) <code>@require_login</code></li>
+                <li>d) <code>@login_required</code></li>
+            </ul>
+        </li>
+
+        <li>If you wanted to store the date and time a model instance was created, which field and option would you use in a Django model?
+            <ul>
+                <li>a) <code>DateField(auto_now=True)</code></li>
+                <li>b) <code>DateTimeField(auto_now_add=True)</code></li>
+                <li>c) <code>TimeField(auto_created=True)</code></li>
+                <li>d) <code>DateField(add_now=True)</code></li>
+            </ul>
+        </li>
+    </ol>
+  </section>
+
+
+  <!-- True or False -->
+  <section>
+    <h2>II. True or False</h2>
+    <ol>
+      <li>Django’s <code>FileField</code> automatically manages file storage when deleting or replacing a file.</li>
+      <li>In Django, the <code>models.py</code> file is primarily used to define the structure of your database tables.</li>
+      <li>The <code>django-admin</code> tool can be used to start a new Django project.</li>
+      <li>Middleware in Django is a series of classes or methods that process requests before reaching the view and responses before going back to the client.</li>
+      <li>In Django's ORM, the <code>QuerySet</code> object is evaluated (i.e., converted to an actual database query) only when it's explicitly saved.</li>
+      <li>When you use Django's built-in <code>User</code> model, passwords are stored in plain text in the database.</li>
+      <li>The <code>urlpatterns</code> list in Django is used to determine which view should be displayed for a given URL path.</li>
+      <li>In Django, if you don't specify a primary key field for your model, it will automatically generate an <code>id</code> field that acts as an auto-incrementing primary key.</li>
+      <li>A Django <code>Form</code> object is only used for rendering forms and doesn't handle any form validation.</li>
+      <li>In a Django model, setting the <code>blank</code> attribute to <code>True</code> for a field means that the field will have a default value in the database.</li>
+    </ol>
+  </section>
+
+  <!-- Code Assessment -->
+  <section class="mb-5">
+    <h2>III. Code Assessment</h2>
+
+    <!-- Challenge 1: Basic Blog Application -->
+    <div>
+        <h3>Challenge 1: Basic Blog Application</h3>
+        <p>
+            <strong>Objective:</strong> Create a basic blog application using Django.
+        </p>
+        <p><strong>Details:</strong></p>
+        <ul>
+            <li><strong>Models:</strong>
+                <ul>
+                    <li><code>Post</code>: Should have fields for title, content, publication date, and author.</li>
+                    <li><code>Comment</code>: Should have fields for post (foreign key to Post), author name, content, and comment date.</li>
+                </ul>
+            </li>
+            <li><strong>Views and URLs:</strong>
+                <ul>
+                    <li>List of all posts.</li>
+                    <li>Detail view for a single post, displaying comments underneath.</li>
+                    <li>Form to add a new post.</li>
+                    <li>Form to add a comment to a post.</li>
+                </ul>
+            </li>
+            <li><strong>Bonus:</strong> Implement user authentication where only logged-in users can write posts but anyone can comment.</li>
+        </ul>
+    </div>
+
+    <!-- Challenge 2: Custom Admin Interface -->
+    <div>
+        <h3>Challenge 2: Custom Admin Interface</h3>
+        <p>
+            <strong>Objective:</strong> Customize the Django admin interface for better usability.
+        </p>
+        <p><strong>Details:</strong></p>
+        <ul>
+            <li>Add the Post and Comment models (from challenge 1) to the admin interface.</li>
+            <li>Customize the list display for Post to show the title, author, and publication date.</li>
+            <li>Make the title field in the Post model clickable in the list display.</li>
+            <li>Implement a search bar to filter posts by title.</li>
+            <li>In the Comment admin interface, display comments inline when viewing a Post.</li>
+        </ul>
+    </div>
+  </section>
+
+
+</div>
+{% endblock %}
