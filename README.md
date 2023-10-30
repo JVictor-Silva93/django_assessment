@@ -112,7 +112,9 @@ Remember to comment your code!
   - Form to add a new post.
   - Form to add a comment to a post.
 
-- **Bonus:** Implement user authentication where only logged-in users can write posts but anyone can comment.
+- **Note:** 
+   - Take a look at the forms.py and ensure it matches your code correctly with the post_detail.html. Or, change both and make it however you'd like
+   - None of the code here has to be set in stone, if you find a better way to build this blog feel free to delete/edit/update any of this code.
 
 ### Challenge 2: Custom Admin Interface
 **Objective:** Customize the Django admin interface for better usability.
