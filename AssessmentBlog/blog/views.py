@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Post  # Assuming you have a model named 'Post'
+from .forms import CommentForm
+# is there anything else you need to import?
 
 def index(request):
     return render(request, 'blog/index.html')

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment # Are these the names in your models.py file?
 
 # TODO: Create an admin model for the Post. Consider customizing the admin view to make it more user-friendly.
 
